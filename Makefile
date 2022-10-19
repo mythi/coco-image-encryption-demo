@@ -8,12 +8,15 @@ setup:
 		$(CONTAINER_ENGINE) logs --details --tail 1 keyprovider 2>&1|grep -q "listening to socket addr"; \
 		exit=$$?; \
 		echo -n "."; \
-	done
+	done; echo "ready."
 
-run:
-	@$(CONTAINER_ENGINE) exec -it --workdir /demo imgencrypter /demo/run.sh
+encrypt:
+	@$(CONTAINER_ENGINE) exec -it --workdir /demo imgencrypter /demo/encrypt.sh
+
+check:
+	@$(CONTAINER_ENGINE) exec -it --workdir /demo imgencrypter /demo/check.sh
 
 stop:
 	@$(CONTAINER_ENGINE) stop keyprovider imgencrypter
 
-.PHONY: setup run stop
+.PHONY: setup encrypt check stop

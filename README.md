@@ -3,7 +3,7 @@
 This repository demonstrates how encrypt container layers with an external gRPC KeyProvider
 service for Key wrapping. We use Confidential Container's `sample_keyprovider`.
 
-[<img src="https://asciinema.org/a/g82wxCicc0WsQPcsAAPV4FDVL.svg&" width="700">](https://asciinema.org/a/g82wxCicc0WsQPcsAAPV4FDVL)
+[<img src="https://asciinema.org/a/g82wxCicc0WsQPcsAAPV4FDVL.svg" width="700">](https://asciinema.org/a/g82wxCicc0WsQPcsAAPV4FDVL)
 
 ## Pre-requisites
 

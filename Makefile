@@ -1,4 +1,5 @@
 CONTAINER_ENGINE ?= "docker"
+SHELL            := "/bin/bash"
 
 setup:
 	@$(CONTAINER_ENGINE) run --rm --detach --name keyprovider --network host -v $(PWD)/attestation-agent/:/demo --workdir /demo/sample_keyprovider docker.io/rust:slim-buster sh -c "rustup component add rustfmt && cargo clean && RUST_LOG=sample_keyprovider cargo run --features sample_enc --release -- --keyprovider_sock 127.0.0.1:50000"

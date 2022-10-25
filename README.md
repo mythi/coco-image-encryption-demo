@@ -34,13 +34,25 @@ $ make setup CONTAINER_ENGINE=podman
 ## Encrypt hello-world Image
 
 ```
-$ make run
+$ make encrypt
 ```
 
 or alternatively, if `podman` is used:
 
 ```
-$ make run CONTAINER_ENGINE=podman
+$ make encrypt CONTAINER_ENGINE=podman
+```
+
+## Check the hello-world Image
+
+```
+$ make check
+```
+
+or alternatively, if `podman` is used:
+
+```
+$ make check CONTAINER_ENGINE=podman
 ```
 
 ## Cleanup Environment
